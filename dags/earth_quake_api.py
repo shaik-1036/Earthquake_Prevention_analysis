@@ -15,7 +15,7 @@ def fetch_earthquake_data(**kwargs):
         "radius": "1000", "units": "miles", "magnitude": "3", "intensity": "1"
     }
     headers = {
-        "x-rapidapi-key": "ccc344d562msh11aea68c338fe90p1b81c2jsnc1a2d1d1fced",
+        "x-rapidapi-key": "Your_api_key",
         "x-rapidapi-host": "everyearthquake.p.rapidapi.com"
     }
     response = requests.get(url, headers=headers, params=querystring)
