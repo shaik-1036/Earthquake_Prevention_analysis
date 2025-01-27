@@ -2,6 +2,9 @@
 
 ## Project Overview
 This project automates the process of fetching, cleaning, and analyzing earthquake data. The pipeline scrapes earthquake data from an API, processes it, and stores it in PostgreSQL using Apache Airflow.
+
+![Earthquake Diagram](images/Earth_quake_arc.svg)
+
 ---
 
 ## Technologies Used
@@ -49,9 +52,8 @@ This will initialize:
   - Password: `airflow`
 ![Airflow UI Login](images/Airflow_login_page_with_password.png)
 - **PgAdmin**: `http://localhost:5050`
-  - Set up your credentials in the UI.
-
-
+  - Username: `admin@admin.com`
+  - Password: `admin`
 ![PgAdmin UI Login](images/Pgadmin_signin_with_passwd.png)
 
 ---
@@ -130,13 +132,13 @@ To allow Airflow to communicate with PostgreSQL:
    - **Port**: `5432`
 4. Click **Test Connection** and then **Save**.
 
-![Airflow Connection Setup](images/Add_postgres_connection_with_airflow.png)
+  ![Airflow Connection Setup](images/Add_postgres_connection_with_airflow.png)
 
 ---
 
 ### 6.3 Activating the DAG
 1. In the Airflow UI, navigate to the **DAGs** tab.
-2. Locate `fetch_earth_quake_data`.
+2. Locate `fetch_data_from_earth_quake_api`.
    ![DAG Search](images/Search_the_dag_file_in_airflow_ui.png)
 3. Toggle it **On** to activate.
 
@@ -155,7 +157,7 @@ To allow Airflow to communicate with PostgreSQL:
 1. Open **pgAdmin** and connect to the database.
 2. Run queries to view the earthquake data:
    ```sql
-   SELECT * FROM Earth_quake_data_api;
+   SELECT * FROM Earthquake_api_data;
    ```
    ![Query Execution](images/run_query_at_pgadmin_for_data_access.png)
 
