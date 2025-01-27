@@ -30,7 +30,7 @@ Here's the complete `README.md` file content with all the provided details:
 Clone the project repository and navigate to the directory:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/shaik-1036/Earthquake_Prevention_analysis.git
 
 ```
 
@@ -111,8 +111,6 @@ and copy &pase it in your Server host address.
 ### 5. Airflow DAGs Configuration
 
 The pipeline logic is defined in the `Earth_quake_api.py` file inside the `dags/` directory. This file contains the workflow to automate scraping, cleaning, and database insertion tasks.
-
-images/setup_code.png
 ![Setup code ](images/setup_code.png)
 ---
 
@@ -172,8 +170,8 @@ This will execute the following steps:
 ```sql
 SELECT * FROM Earth_quake_data_api;
 ```
+![Activate & run task](images/images/run_query_at_pgadmin_for_data_access.png)
 
-images/run_query_at_pgadmin_for_data_access.png
 
 #### Using the Terminal (`psql`):
 
